@@ -5,6 +5,10 @@
 *.tfstate
 *.tfstate.*
 
+# .tfplan files
+*.tfplan
+*.tfplan.*
+
 # Crash log files
 crash.log
 crash.*.log
@@ -35,3 +39,9 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Ignore the Master Key generated for Octopus (this is applied to the Octopus Server, itself, so no need to include it in source)
+*master_key*
+
+# Ignore the SSL Certificate Output[s] (these are pushed to a storage account, so no need to include them into source)
+*ssl*
