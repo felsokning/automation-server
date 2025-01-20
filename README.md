@@ -59,4 +59,4 @@ To plan the changes, run `terraform plan --var-file <your tfvars file here> -out
 To apply the changes, using the plan created above, run `terraform apply "plan.tfplan"` and this will immediately start the apply process.
 
 ### Terraform Destory
-To remove all of the changes that terraform applies, first plan the destructive actions `terraform plan -destroy -out plan.destroy.tfplan`, and then apply the destructive actions `terraform apply "plan.destroy.tfplan"`.
+To remove all of the changes that terraform applies, first plan the destructive actions `terraform plan --var-file <your tfvars file here> -destroy -out plan.destroy.tfplan`, and then apply the destructive actions `terraform apply "plan.destroy.tfplan"`.
