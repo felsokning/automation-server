@@ -10,6 +10,11 @@ The Terraform Pipeline Used to Deploy the Octopus Deploy Server to Azure via Azu
 - Need to investigate using Traefik (replacing NGINX), given they can retrive certificates from Let's Encrypt.
     * This will deprecate the certificate steps; so not a small change.
 
+# Cost Implications
+Deploying an Octopus Deploy Server via this means costs an average of 3.24SEK/day (or €0.03/day); however, the larget cost implications will come from the SQL Server.
+
+![Azure Costs](./screenshots/azure_costs.png)
+
 # Building Your Own Octopus Deploy Server in Azure with this Terraform definition
 These are the steps required to build your own Octopus Deploy Server in Azure using this pipeline.
 
