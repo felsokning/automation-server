@@ -207,7 +207,7 @@ resource "null_resource" "ssl_key" {
 }
 
 resource "azurerm_mssql_server" "octopussqlserver" {
-  name                         = "octopussqlprod"
+  name                         = var.sqlServerName
   resource_group_name          = azurerm_resource_group.octo_resource_group.name
   location                     = azurerm_resource_group.octo_resource_group.location
   version                      = "12.0"
@@ -234,7 +234,7 @@ resource "azurerm_mssql_firewall_rule" "acifirewallrule" {
 }
 
 resource "azurerm_mssql_database" "octopussqldb" {
-  name           = "octopusdb"
+  name           = var.sqlDbName
   server_id      = azurerm_mssql_server.octopussqlserver.id
   license_type   = "LicenseIncluded"
   max_size_gb    = 4
@@ -249,7 +249,7 @@ resource "azurerm_mssql_database" "octopussqldb" {
 }
 
 resource "azurerm_container_registry" "octo_registry" {
-  name                = "octoregistry"
+  name                = var.registryName
   resource_group_name = azurerm_resource_group.octo_resource_group.name
   location            = azurerm_resource_group.octo_resource_group.location
   sku                 = "Standard"
@@ -279,7 +279,7 @@ resource "null_resource" "docker_image" {
 }
 
 resource "azurerm_container_group" "octopusdeploy" {
-  name                = "octopusdeploy"
+  name                = var.containerGroupName
   location            = azurerm_resource_group.octo_resource_group.location
   resource_group_name = azurerm_resource_group.octo_resource_group.name
   ip_address_type     = "Public"

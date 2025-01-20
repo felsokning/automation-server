@@ -1,3 +1,7 @@
+variable "containerGroupName" {
+  description = "The name of the Azure Container Group"
+}
+
 variable "countryCode" {
   description = "The Country Code for the Self-Signed Certificate"  
 }
@@ -27,6 +31,10 @@ variable "region" {
   description = "The geographic sub-region (e.g.: NORTH, EAST, SOUTH, WEST, etc.) for resource naming" 
 }
 
+variable "registryName" {
+  description = "The name for the Azure Container Registry" 
+}
+
 variable "resource_group_location" {
   description = "Location of the resource group."
 }
@@ -37,6 +45,14 @@ variable "skuName" {
 
 variable "sqlAdmin" {
   description = "The name of the SQL Admin Account"
+}
+
+variable "sqlDbName" {
+  description = "The name of the SQL Database"
+}
+
+variable "sqlServerName" {
+  description = "The name of the SQL Server"
 }
 
 variable "subjectAlternativeName" {
