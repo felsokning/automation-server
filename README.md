@@ -5,7 +5,7 @@ The Terraform Pipeline Used to Deploy the Octopus Deploy Server to Azure via Azu
 
 # TODO:
 - Need to implement optional state file storage in an Azure Storage Account
-    * Terraform state will be lost when docker containers are disposed of.
+    * Terraform state is only being maintained via files generated from the process and stored in this root folder (ignored in `.gitignore`).
         * State will be important for production scenarios.
 - Need to investigate using Traefik (replacing NGINX), given they can retrive certificates from Let's Encrypt.
     * This will deprecate the certificate steps; so not a small change.
