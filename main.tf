@@ -239,7 +239,7 @@ resource "azurerm_mssql_database" "octopussqldb" {
   license_type   = "LicenseIncluded"
   max_size_gb    = 4
   read_scale     = true
-  sku_name       = "BC_Gen5_2"
+  sku_name       = var.skuName
   zone_redundant = false
 
   depends_on = [

@@ -31,6 +31,10 @@ variable "resource_group_location" {
   description = "Location of the resource group."
 }
 
+variable "skuName" {
+  description = "The SKU to use for the SQL Server"  
+}
+
 variable "sqlAdmin" {
   description = "The name of the SQL Admin Account"
 }
