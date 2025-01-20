@@ -4,9 +4,6 @@ The Terraform Pipeline Used to Deploy the Octopus Deploy Server to Azure via Azu
 🄯 2025 Felsökning/Felsokning. All rights reserved.
 
 # TODO:
-- Need to finish a worker-tools container that can run this process end-to-end, which can be pulled from docker.
-    * The container will be referenced in `Load-WorkerToolsContainer.ps1`.
-        * Only a local version is referenced, at present.
 - Need to implement optional state file storage in an Azure Storage Account
     * Terraform state will be lost when docker containers are disposed of.
         * State will be important for production scenarios.
