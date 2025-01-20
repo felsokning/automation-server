@@ -15,6 +15,12 @@ Deploying an Octopus Deploy Server via this means costs an average of 3.24SEK/da
 
 ![Azure Costs](./screenshots/azure_costs.png)
 
+## SQL SKU
+The SQL SKU can be changed/modified to reduce the costs of the SQL server.
+
+- vCore: https://learn.microsoft.com/en-us/azure/azure-sql/database/resource-limits-vcore-single-databases?view=azuresql
+- DTU: https://learn.microsoft.com/en-us/azure/azure-sql/database/resource-limits-dtu-single-databases?view=azuresql 
+
 # Building Your Own Octopus Deploy Server in Azure with this Terraform definition
 These are the steps required to build your own Octopus Deploy Server in Azure using this pipeline.
 
