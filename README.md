@@ -35,6 +35,10 @@ I provide worker-tools docker containers that can used for this scenario.
 
 To use the container that I publish, run `.\Load-WorkerToolsContainer.ps1` in PowerShell from this repository's root folder.
 
+This is a screenshot showing the process.
+
+![Proof of Terraform Plan from Container](./screenshots/terraform_from_container.png)
+
 ## Terraform Process
 
 ### TFVars Files
