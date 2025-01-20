@@ -34,7 +34,9 @@ At minimum, you will need:
     * Used to create a certificate request - and then used to create a self-signed certificate, based on the certificate request.
 
 ### Docker Container
-I provide worker-tools docker containers that can used for this scenario. You might need to upgrade the tools on them until I publish a more recent version.
+I provide worker-tools docker containers that can used for this scenario.
+
+To use the container that I publish, run `.\Load-WorkerToolsContainer.ps1` in PowerShell from this repository's root folder.
 
 ## Terraform Process
 
