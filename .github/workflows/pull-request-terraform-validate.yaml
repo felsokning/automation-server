@@ -1,0 +1,19 @@
+name: Terraform Validate
+
+on:
+    pull_request:
+        types: [opened, reopened, edited, synchronize, ready_for_review]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: felsokning/worker-tools:4.0.0
+    steps:
+        - name: Check out code
+          uses: actions/checkout@main
+        - name: Terraform Init
+          run: |
+            terraform init -upgrade -backend=false
+        - name: Terraform Init
+          run: |
+            terraform validate
